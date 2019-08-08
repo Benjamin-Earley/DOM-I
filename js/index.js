@@ -41,7 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navigation = document.getElementsByTagName("a");
+let navigation = document.querySelectorAll("a");
 Array.from(navigation);
 
     navigation[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -50,6 +50,18 @@ Array.from(navigation);
     navigation[3].textContent = siteContent["nav"]["nav-item-4"];
     navigation[4].textContent = siteContent["nav"]["nav-item-5"];
     navigation[5].textContent = siteContent["nav"]["nav-item-6"];
+    navigation.forEach(element => { 
+       element.style.color = "green";
+    });
+    const nav = document.querySelector('nav');
+        const appended = document.createElement('a');
+            appended.textContent = "Appended";
+            appended.style.color = "green";
+            nav.appendChild(appended);
+        const prepended = document.createElement('a');
+            prepended.textContent = "Prepended";
+            prepended.style.color = "green";
+            nav.prepend(prepended);
 
 let hOne = document.querySelector("h1").textContent = siteContent["cta"]["h1"];
 
