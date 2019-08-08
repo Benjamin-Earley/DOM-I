@@ -50,3 +50,10 @@ navigation[2].textContent = siteContent["nav"]["nav-item-3"];
 navigation[3].textContent = siteContent["nav"]["nav-item-4"];
 navigation[4].textContent = siteContent["nav"]["nav-item-5"];
 navigation[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let hOne = document.querySelector('h1').textContent = siteContent["cta"]["h1"];
+
+let btn = document.querySelector('button').textContent = siteContent["cta"]["button"];
+
+let image1 = document.getElementById('cta-img');
+image1.setAttribute('src', siteContent["cta"]["img-src"]);
