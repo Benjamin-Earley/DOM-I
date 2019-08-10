@@ -63,7 +63,13 @@ Array.from(navigation);
             prepended.style.color = "green";
             nav.prepend(prepended);
 
-let hOne = document.querySelector("h1").textContent = siteContent["cta"]["h1"];
+let hOne = document.querySelector("h1");
+    let dom = siteContent.cta.h1.substring(0, 3);
+    let is = siteContent.cta.h1.substring(3, 6);
+    let awesome = siteContent.cta.h1.substring(6, 14);
+    let brokenhOne = `${dom} \n ${is} \n ${awesome}`;
+    hOne.textContent = brokenhOne;
+    hOne.style.whiteSpace = "pre-line";    
 
 let btn = document.querySelector("button").textContent = siteContent["cta"]["button"];
 
