@@ -97,7 +97,14 @@ let mainImg = document.querySelector('#middle-img').setAttribute('src', siteCont
 
 allH4[5].textContent = siteContent["contact"]["contact-h4"];
 allPs[5].textContent = siteContent["contact"]["address"];
+
+    let address1 = document.querySelector(".contact p");
+      let street = siteContent.contact.address.substring(0, 18);
+      let state = siteContent.contact.address.substring(18, 33);
+      let brokenAddress = `${street} \n ${state}`;
+      address1.textContent = brokenAddress;
+      address1.style.whiteSpace = "pre-line";
+
 allPs[6].textContent = siteContent["contact"]["phone"];
 allPs[7].textContent = siteContent["contact"]["email"];
-
 allPs[8].textContent = siteContent["footer"]["copyright"];
